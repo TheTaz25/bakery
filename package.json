@@ -1,0 +1,14 @@
+{
+  "name": "bakery",
+  "version": "0.1.0",
+  "description": "A lightweight tool for creating templates in projects and more",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Denis Ergin",
+  "license": "ISC",
+  "dependencies": {
+    "commander": "^4.1.1"
+  }
+}
