@@ -142,12 +142,21 @@ program
   .command('import')
   .description('Import templates from an existing export')
   .action(() => {
-
+    fs.access('./.templates.json', fs.constants.F_OK | fs.constants.R_OK, err => {
+      if (err) {
+        console.log(`No './templates.json' found in current directory, stoping import`);
+        process.exit(1);
+      } else {
+        fs.readFile('./.templates.json', (err, data) => {
+          console.log(data);
+        });
+      }
+    });
   });
 
 program
-  .command('clear')
-  .description('Clear Bakery-Cache!')
+  .command('clean')
+  .description('Clean Bakery-Cache! (On your own responsibility...)')
   .action(() => {
 
   });
